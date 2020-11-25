@@ -21,6 +21,32 @@ fun main() {
 }
 ```
   
+downTo, step 키워드로 디테일한 iteration을 구현가능
+``` kotlin
+fun main() {
+	for (i in 10 downTo 1) {
+		print("$i ");
+	}
+	println();
+	for (i in 1..5 step 2) {
+		print("$i ");
+	}
+}
+```
+출력결과:
+5 4 3 2 1
+1 3 5
+  
+배열요소를 index와 함께 뽑아낼수도 있음
+``` kotlin
+fun main() {
+	var arr: Array = arrayOf(1,2,3);
+	for ((index, value) in arr.withIndex()) {
+		println("$index-th value of arr: $value");
+	}
+}
+```
+  
 ## while Loop
 while/ do-while 문은 자바와 동일하게 동작
 ``` kotlin
